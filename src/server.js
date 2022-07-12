@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 app.use('/usuario', routes.usuario);
 app.use('/produto', routes.produto);
+app.use('/cigarro', routes.cigarro)
 
 
 app.use((req, res) => {
