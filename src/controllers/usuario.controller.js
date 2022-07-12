@@ -1,6 +1,7 @@
 const db = require('../models');
 const Usuario = db.rest.models.usuarios;
 
+
 exports.getUsuario = async (req, res) => {
   const { id } = req.params;
 
@@ -10,7 +11,7 @@ exports.getUsuario = async (req, res) => {
         id,
       },
     });
-
+  
     if (!usuario) {
       return res.status(400).send({
         message: `Não foi encontrado usuário com id ${id}`,
